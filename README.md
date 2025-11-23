@@ -81,7 +81,7 @@ npm >= 8.0.0  (or yarn >= 1.22.0)
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/CodeWithBakar/cosmic-portfolio.git
+git clone https://github.com/abubakarxdev/cosmic-portfolio.git
 cd cosmic-portfolio
 
 # 2. Install dependencies
