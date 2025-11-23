@@ -42,95 +42,104 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Decorative Orbits */}
-      <div className="absolute top-20 right-20 opacity-30">
+      {/* Decorative Orbits - Removed for 3D Scene */}
+      {/* <div className="absolute top-20 right-20 opacity-30">
         <PlanetOrbit size="lg" color="cosmic" />
       </div>
       <div className="absolute bottom-20 left-20 opacity-20">
         <PlanetOrbit size="md" color="nebula" />
-      </div>
+      </div> */}
 
-      <div className="container mx-auto px-6 z-10 pt-32">
-        <div className="text-center flex flex-col items-center justify-center h-full">
-          {/* Greeting */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-6"
-          >
-            <span className="text-cosmic-400 text-lg md:text-xl font-medium tracking-wide">
-              Welcome to the Cosmos
-            </span>
-          </motion.div>
-
-          {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8"
-          >
-            <span className="gradient-text">Abu Bakar</span>
-          </motion.h1>
-
-          {/* Typing Animation */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-10 h-12 flex items-center justify-center"
-          >
-            <span>{text}</span>
-            <span className={`ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'}`}>|</span>
-          </motion.div>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-16 leading-relaxed"
-          >
-            Crafting digital experiences across the universe. Passionate about creating 
-            innovative solutions that push the boundaries of technology.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
-          >
-            <CosmicButton onClick={scrollToProjects} variant="primary">
-              View My Work
-            </CosmicButton>
-            <CosmicButton onClick={scrollToContact} variant="outline">
-              Get In Touch
-            </CosmicButton>
-            <CosmicButton onClick={() => window.open(resume, '_blank')} variant="outline">
-              View Resume
-            </CosmicButton>
-          </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1 }}
-            className="relative mt-auto"
-          >
+      <div className="container mx-auto px-6 z-10 pt-32 h-full">
+        <div className="grid md:grid-cols-2 gap-12 h-full items-center">
+          {/* Left Content */}
+          <div className="text-left flex flex-col justify-center">
+            {/* Greeting */}
             <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="flex flex-col items-center cursor-pointer hover:text-cosmic-400 transition-colors"
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6"
             >
-              <span className="text-sm text-gray-400 mb-2 tracking-widest uppercase text-xs">Scroll Down</span>
-              <FiChevronDown className="text-2xl text-cosmic-400" />
+              <span className="text-cosmic-400 text-lg md:text-xl font-medium tracking-wide">
+                Welcome to the Cosmos
+              </span>
             </motion.div>
-          </motion.div>
+
+            {/* Name */}
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 origin-left"
+            >
+              <span className="gradient-text">Abu Bakar</span>
+            </motion.h1>
+
+            {/* Typing Animation */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-10 h-12 flex items-center justify-start"
+            >
+              <span>{text}</span>
+              <span className={`ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'}`}>|</span>
+            </motion.div>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-gray-400 text-lg md:text-xl max-w-2xl mb-16 leading-relaxed"
+            >
+              Crafting digital experiences across the universe. Passionate about creating 
+              innovative solutions that push the boundaries of technology.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="flex flex-col sm:flex-row items-center justify-start gap-6 mb-20"
+            >
+              <CosmicButton onClick={scrollToProjects} variant="primary">
+                View My Work
+              </CosmicButton>
+              <CosmicButton onClick={scrollToContact} variant="outline">
+                Get In Touch
+              </CosmicButton>
+              <CosmicButton onClick={() => window.open(resume, '_blank')} variant="outline">
+                View Resume
+              </CosmicButton>
+            </motion.div>
+          </div>
+
+          {/* Right Column - Reserved for 3D Earth */}
+          <div className="hidden md:block">
+            {/* The Earth is in the background layer, but this spacer helps with layout if needed */}
+          </div>
         </div>
+
+        {/* Scroll Indicator - Centered at bottom */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        >
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="flex flex-col items-center cursor-pointer hover:text-cosmic-400 transition-colors"
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            <span className="text-sm text-gray-400 mb-2 tracking-widest uppercase text-xs">Scroll Down</span>
+            <FiChevronDown className="text-2xl text-cosmic-400" />
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Floating Elements */}

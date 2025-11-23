@@ -2,6 +2,7 @@ import React from 'react';
 import StarfieldBackground from './components/StarfieldBackground';
 import NebulaBackground from './components/NebulaBackground';
 import ParticleField from './components/ParticleField';
+import Scene3D from './components/Scene3D';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -18,8 +19,9 @@ function App() {
     <div className="relative min-h-screen bg-space-dark text-white">
       <SEO />
       {/* Background Layers */}
-      <StarfieldBackground />
-      <NebulaBackground />
+      <Scene3D />
+      {/* <StarfieldBackground /> */}
+      {/* <NebulaBackground /> */}
       <ParticleField />
 
       {/* Navigation */}
