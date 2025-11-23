@@ -11,9 +11,12 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
+import SEO from './components/SEO';
+
 function App() {
   return (
     <div className="relative min-h-screen bg-space-dark text-white">
+      <SEO />
       {/* Background Layers */}
       <StarfieldBackground />
       <NebulaBackground />
