@@ -15,6 +15,13 @@ body {
   color: #ffffff;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  position: relative; /* Ensure z-index context */
+}
+
+/* Ensure main content is above the fixed background */
+main {
+  position: relative;
+  z-index: 10;
 }
 
 h1, h2, h3, h4, h5, h6 {
