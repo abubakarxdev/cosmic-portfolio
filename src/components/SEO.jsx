@@ -15,6 +15,7 @@ const SEO = ({ title, description, keywords, image, url }) => {
       <meta name="description" content={description || defaultDescription} />
       <meta name="keywords" content={keywords || defaultKeywords} />
       <meta name="author" content="Abu Bakar" />
+      <meta name="google-site-verification" content="0d1ec52dbfa5dcc0" />
       <link rel="canonical" href={url || siteUrl} />
 
       {/* Open Graph / Facebook */}
